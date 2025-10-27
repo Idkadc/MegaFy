@@ -8,47 +8,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="app-container">
-        <h1>Mega-fy: Cloud Streamer</h1>
-
-        <div class="input-section">
-            <input type="text" id="megaLinkInput" placeholder="Paste MEGA music link here">
-            <button id="loadButton">Load Track</button>
-        </div>
-
-        <div class="spotify-player">
-            <div class="track-info">
-                <div class="album-art"></div>
-                <div class="text-info">
-                    <p id="trackTitle" class="title">Waiting for Link...</p>
-                    <p id="trackArtist" class="artist">Paste a MEGA link to load music.</p>
-                </div>
+    <div class="main-layout">
+        <div class="playlist-sidebar">
+            <h2>Your MEGA Playlists</h2>
+            <div id="playlistContainer" class="playlists">
+                <p class="playlist-loading">Simulated MEGA Folder/Playlist is loading...</p>
             </div>
-
-            <div class="controls-container">
-                <div class="progress-bar-container" id="progressBarContainer">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
-                
-                <div class="time-display">
-                    <span id="currentTime">0:00</span>
-                    <span id="duration">0:00</span>
-                </div>
-
-                <div class="controls">
-                    <button id="playPauseButton" class="control-button disabled" disabled>
-                        <i class="fas fa-play"></i>
-                    </button>
-                </div>
+            
+            <div class="input-section">
+                <input type="text" id="megaLinkInput" placeholder="Paste MEGA link (Simulated)">
+                <button id="loadButton">Load</button>
             </div>
         </div>
-        
-        <p class="disclaimer">
-            *Note: This front-end simulates a direct streaming player. A real 'Mega-fy' app requires a server or a complex client-side library to convert the MEGA link into a direct streamable URL.
-        </p>
 
+        <div class="player-view">
+            <h1>Mega-fy: Now Playing</h1>
+            
+            <div class="spotify-player">
+                <div class="track-info">
+                    <div class="album-art"><i class="fas fa-compact-disc"></i></div>
+                    <div class="text-info">
+                        <p id="trackTitle" class="title">Welcome to Mega-fy</p>
+                        <p id="trackArtist" class="artist">Select a track from the left!</p>
+                    </div>
+                </div>
+
+                <div class="controls-container">
+                    <div class="progress-bar-container" id="progressBarContainer">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+
+                    <div class="controls">
+                        <button id="prevButton" class="control-button disabled" disabled><i class="fas fa-backward"></i></button>
+                        <button id="playPauseButton" class="control-button disabled" disabled><i class="fas fa-play"></i></button>
+                        <button id="nextButton" class="control-button disabled" disabled><i class="fas fa-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="disclaimer">
+                ⚠️ **Real-World Note:** Directly streaming MEGA links in a web app is highly complex and requires special libraries/servers. This app uses **simulated data** to demonstrate the full playlist, skip, and player functionality.
+            </p>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
