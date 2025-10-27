@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega-fy: Cloud Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Mega-fy: Cloud Streamer</h1>
+
+        <div class="input-section">
+            <input type="text" id="megaLinkInput" placeholder="Paste MEGA music link here">
+            <button id="loadButton">Load Track</button>
+        </div>
+
+        <div class="spotify-player">
+            <div class="track-info">
+                <div class="album-art"></div>
+                <div class="text-info">
+                    <p id="trackTitle" class="title">Waiting for Link...</p>
+                    <p id="trackArtist" class="artist">Paste a MEGA link to load music.</p>
+                </div>
+            </div>
+
+            <div class="controls-container">
+                <div class="progress-bar-container" id="progressBarContainer">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                
+                <div class="time-display">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="controls">
+                    <button id="playPauseButton" class="control-button disabled" disabled>
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <p class="disclaimer">
+            *Note: This front-end simulates a direct streaming player. A real 'Mega-fy' app requires a server or a complex client-side library to convert the MEGA link into a direct streamable URL.
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
