@@ -1,0 +1,152 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #1DB954; /* Spotify Green */
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+/* --- Input Section --- */
+.input-section {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#megaLinkInput {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    background-color: #282828;
+    color: #ffffff;
+}
+
+#loadButton {
+    padding: 10px 15px;
+    border: none;
+    background-color: #1DB954;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.2s;
+}
+
+#loadButton:hover {
+    background-color: #1ed760;
+}
+
+/* --- Spotify Player Styling --- */
+.spotify-player {
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.album-art {
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist {
+    font-size: 0.9em;
+    color: #b3b3b3;
+    margin: 3px 0 0 0;
+}
+
+/* --- Progress Bar --- */
+.progress-bar-container {
+    height: 4px;
+    background-color: #535353;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #1DB954;
+    border-radius: 2px;
+}
+
+/* --- Time & Controls --- */
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #b3b3b3;
+    margin-bottom: 15px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s;
+    outline: none;
+}
+
+.control-button:hover:not(:disabled) {
+    color: #1DB954;
+}
+
+.control-button.disabled {
+    color: #535353;
+    cursor: not-allowed;
+}
+
+.disclaimer {
+    font-size: 0.7em;
+    color: #808080;
+    margin-top: 20px;
+}
